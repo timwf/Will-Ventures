@@ -1,0 +1,128 @@
+.text-image-right{
+
+  &__inner{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    position: relative;
+
+    @include respond-to(md){
+      flex-direction: row;
+    }
+  }
+
+  &__left{
+
+    @include respond-to(md){
+      width: 50%;
+    }
+  }
+
+  &__left-inner{
+    height: 100%;
+    transform: translateY(100vh);
+    opacity: 0;
+    transition: 0.4s;
+
+    @include respond-to(md){
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: absolute;
+    }
+
+
+    h2{
+      margin-bottom: 35px;
+      margin-top: 34px;
+      font-size: 16px;
+
+
+      @include respond-to(md){
+        margin-bottom: 154px;
+        margin-top: 0px;
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__right{
+    position: relative;
+
+    @include respond-to(md){
+      width: 50%;
+    }
+
+  }
+
+  &__image-wrap{
+    height: 50vh;
+    
+
+    @include respond-to(md){
+      height: calc(100vh - 80px);
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    @include respond-to(xl){
+      height: calc(100vh - 260px);
+    }
+
+    img{
+     // height: calc(29vh );
+      width: auto;
+      max-width: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+
+      @include respond-to(md){
+       // height: calc(53vh );
+      }
+
+
+
+      @include respond-to(xl){
+        //height: calc(45vh );
+      }
+
+    }
+  } 
+  
+  &__image-one{
+
+    height: 48vw;
+
+    @include respond-to(md){
+      height: 38vh;
+    }
+  }
+
+  &__image-two{
+    height: 53vw;
+
+    @include respond-to(md){
+      height: 43vh;
+    }
+  }
+
+  &__image-three{
+    height: 58vw;
+
+    @include respond-to(md){
+      height: 48vh;
+    }
+  }
+
+  &__image-four{
+    height: 62vw;
+
+    @include respond-to(md){
+      height: 53vh;
+    }
+  }
+}

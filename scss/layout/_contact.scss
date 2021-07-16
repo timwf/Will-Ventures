@@ -1,0 +1,257 @@
+.contact{
+  padding-top: 4px;
+  padding-bottom: 44px;
+
+  @include respond-to(sm){
+    padding-top: 69px;
+    padding-bottom: 100px;
+  }
+
+  h1{
+    text-transform: uppercase;
+  }
+
+  h2{
+    font-family: 'GT-America-Standard-Regular';
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 25px;
+
+    @include respond-to(md){
+      font-size: 24px;
+      margin-top: 26px;
+      margin-bottom: 64px;
+      width: 50%;
+    }
+  }
+
+  &__inner{
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include respond-to(md){
+      flex-direction: row;
+    }
+
+  }
+
+  &__left{
+
+
+
+    @include respond-to(md){
+      width: 50%;
+    }
+  }
+
+  &__form{
+    margin-top: 40px;
+
+    @include respond-to(md){
+      margin-top: 0px;
+    }
+
+    input, select{
+      background-color: black;
+      border: none;
+      border-bottom: solid $white;
+      border-width: 1px;
+      width: 100%;
+      margin-bottom: 41px;
+      padding-bottom: 10px;
+      color: $neon;
+      font-size: 18px;
+      font-family: 'GT-America-Standard-Regular';
+      -webkit-appearance: none;
+
+      @include respond-to(md){
+        margin-bottom: 55px;
+      }
+    }
+
+    p{
+      font-size: 18px;
+      font-family: 'GT-America-Standard-Regular';
+      color: white;
+      padding-bottom: 10px;
+    }
+
+    textarea{
+      background-color: black;
+      border: solid $white;
+      border-width: 1px;
+      width: 100%;
+      color: $neon;
+      padding: 10px;
+      font-size: 18px;
+      font-family: 'GT-America-Standard-Regular';
+    }
+
+    select{
+      color: white;
+    }
+
+    option{
+      padding: 200px;
+    }
+
+    .btn{
+      margin-top: 38px;
+    }
+  }
+
+  &__form-double-row{
+
+    @include respond-to(md){
+      display: flex;
+    }
+
+
+    input{
+      @include respond-to(md){
+        width: 50%; 
+      }     
+    }
+
+    input:first-of-type{
+
+      @include respond-to(md){
+        margin-right: 10px;
+      }  
+    }
+
+    input:last-of-type{
+
+      @include respond-to(md){
+        margin-left: 10px;
+      }  
+    }
+  }
+  
+  &__right{
+    position: relative;
+
+    @include respond-to(md){
+      width: 50%;
+
+    }    
+  }
+
+  &__image-wrap{
+    height: 88vw;
+    position: relative;
+    margin-left: -10px;
+    
+
+    @include respond-to(md){
+      margin-left: 40px;
+      bottom: 62px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    @include respond-to(lg){
+      margin-left: 62px;
+    }
+
+    img{
+     // height: calc(29vh );
+      width: auto;
+      max-width: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+
+      @include respond-to(md){
+       // height: calc(53vh );
+      }
+
+
+
+      @include respond-to(xl){
+        //height: calc(45vh );
+      }
+
+    }
+  } 
+  
+  &__image-one{
+    height: 45vw;
+
+    @include respond-to(md){
+      height: 16vw;
+    }
+  }
+
+  &__image-two{
+    height: 50vw;
+
+
+    @include respond-to(md){
+      height: 20vw;
+    }
+  }
+
+  &__image-three{
+    height: 57vw;
+
+
+    @include respond-to(md){
+      height: 25vw;
+    }
+  }
+
+  &__image-four{
+    height: 64vw;
+
+
+    @include respond-to(md){
+      height: 30vw;
+    }
+  }
+
+  &__image-contact{
+
+    display: none;
+
+    @include respond-to(md){
+      display: block;
+      width: 236px;
+      margin-right: auto;
+      position: absolute;
+      right: calc(41px - 5vw);
+      bottom: 0px;
+    }
+
+    @include respond-to(xl){
+      right: calc(41px + -15vw);
+    }
+
+
+
+
+
+    a{
+      display: block;
+      font-size: 18px;
+    }
+  }
+
+  input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px black inset !important;
+
+}
+
+input:-webkit-autofill
+  {
+  -webkit-text-fill-color: $neon !important;
+  }
+}

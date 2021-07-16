@@ -1,0 +1,43 @@
+.teammate-header{
+
+  &__inner{
+    padding-bottom: 39px;
+
+
+    @include respond-to(md){
+      display: flex;
+      padding-bottom: 85px;
+      max-width: 1200px;
+    }
+  }
+
+  &__left{
+
+    margin-top: 36px;
+
+    @include respond-to(md){
+      width: 50%;
+    }
+  }
+
+  &__right{
+    margin-top: 29px;    
+
+    @include respond-to(md){
+      max-width: 408px;
+      margin-top: 55px;
+      width: 50%;
+      margin-left: 100px;
+    }
+  }
+}
+
+.teammates-divider{
+  background-color: #1F1F1F;
+
+  h4{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+  }
+}

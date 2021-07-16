@@ -1,0 +1,70 @@
+.home-hero{
+  //height: calc(100vh - 60px);
+  width: 100%;
+  // height: calc(var(--vh, 1vh) * 100 - 60px);
+
+  // @include respond-to(sm){
+  //   height: calc(100vh - 73px);
+  // }
+
+  &__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+    video{
+      max-width: calc(100vw - 20px);
+
+      @include respond-to(lg){
+        max-width: calc(100vw - 386px);
+      }
+    }
+
+    svg{
+      //height: 400px!important;
+      width: auto !important;
+      height: auto !important;
+    }
+  }
+
+  &__scroll-down{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    height: 60px;
+
+    @include respond-to(sm){
+      bottom: 16px;
+    }
+
+    h3{
+      @include hover{
+        cursor: pointer;
+      }
+    }
+
+    svg{      
+      top: 0px;
+      position: relative;
+      animation-name: arrow-hero;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      cursor: pointer;
+
+      @include respond-to(md){
+        height: 10px;
+        top: 0px;
+        left: -5px;
+      }
+    }
+  }
+}
+
+@keyframes arrow-hero {
+  0% {top: 0px;}
+  25%  {top: 4px;}
+  50%  {top: 0px;}
+  75% {top: 4px;}
+}

@@ -12,6 +12,12 @@ html {
 
 body {
   max-width: 100%;
+
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
   overflow-x: hidden;
 }
 
@@ -43,7 +49,12 @@ img {
  */
 a {
   text-decoration: none;
-  @include transition;
+  @include hover{
+    color: $neon;
+  }
+  color: $white
+
+ 
 }
 
 h1,
@@ -65,4 +76,26 @@ button {
   background-color: transparent;
   outline: none;
   cursor: pointer;
+}
+
+
+input{
+  border: none;
+  border-bottom: solid $black;
+  border-width: 1px;
+  padding: 8px 0px;
+  outline: none;
+}
+
+.page-wrap{
+  padding-top: 63px;
+
+  @include respond-to(sm){
+    padding-top: 72px;
+  }  
+
+  &--white{
+    background-color: white;
+    color: $black;
+  }
 }

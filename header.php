@@ -29,8 +29,33 @@
     <?php wp_head(); ?>
   </head>
 
-  <body <?php body_class(); ?>>
+  <body <?php body_class(); ?> >
+
 <!--[if IE]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
   your browser</a> to improve your experience and security.</p>
 <![endif]-->
+
+
+<header class="header">
+  <div class="header__inner ">
+    <div class="header__menu">
+      <p class="body-p">Menu</p>      
+    </div>
+    <a href="<?php echo home_url(); ?>"><?php _get_template_part('templates/components/_logo'); ?></a>
+  </div>
+</header>
+
+<div class="page-tranition"></div>
+
+<?php _get_template_part('templates/components/_fly-out-nav'); ?>
+
+<main-wrap data-barba="wrapper">
+  <main data-barba="container" data-barba-namespace="<?php echo basename(get_permalink()) ?>">
+
+
+
+
+
+
+

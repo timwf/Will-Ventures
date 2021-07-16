@@ -24,6 +24,15 @@
   padding-left: 20px; /* 3 */
   padding-right: 20px; /* 3 */
   width: 100%; /* 1 */
+
+  @include respond-to(sm){
+    padding-left: 40px; /* 3 */
+    padding-right: 40px; /* 3 */
+  }
+}
+
+.container-wide{
+  max-width: 2000px;
 }
 
 /**
@@ -81,11 +90,26 @@ html.disable-scrolling {
   }
 }
 
+.reveal-slide-full{
+  transform: translateY(0%);
+  transition: 0.4s;
+}
+
 /* Scroll reveal */
 .is-observer {
   .reveal-slide {
     opacity: 0;
     transform: translateY(40px);
+    @include transition-reveal;
+  }
+
+  .reveal-slide-full{
+    transform: translateY(100%);
+    transition: 0.4s;
+  }
+
+  .reveal-fade {
+    opacity: 0;
     @include transition-reveal;
   }
 
@@ -103,7 +127,12 @@ html.disable-scrolling {
 
   .reveal-fade {
     opacity: 0;
-    @include transition-reveal;
+    transition: 1.1s;
+    
+
+    @include respond-to(sm){
+      transition-delay: 0.4s;
+    }
   }
 
   .is-visible {
@@ -122,6 +151,14 @@ html.disable-scrolling {
     &.reveal-del-4,
     .reveal-del-4 {
       transition-delay: 1.3s;
+    }
+
+    .reveal-fade {      
+      opacity: 1;      
+    }
+
+    &.reveal-slide-full{
+      transform: translateY(0%);
     }
 
     .reveal-slide,

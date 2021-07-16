@@ -1,0 +1,21 @@
+.prospectives-generic{
+  margin-top: 0px;
+
+  & .prospectives-listen__right{
+    position: relative;
+
+    height: 100%;
+
+
+    @include respond-to(lg){
+
+      height: calc(100vh - 133px);
+    }
+
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

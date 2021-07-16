@@ -1,0 +1,158 @@
+.portfolio-logos{
+  margin-top: 42px;
+  margin-bottom: 42px;
+
+  @include respond-to(md){
+    margin-top: 63px;
+    margin-bottom: 100px;
+  }
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond-to(md){
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__svg{
+    margin: auto;
+    display: flex;
+
+    path{
+      fill: white
+    }
+  }
+
+  &__svg-white{
+
+
+    path{
+      fill: white
+    }
+  }
+
+  &__grid-item{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    //position: relative;
+
+    @include respond-to(md){
+      padding-top: 55px;
+      padding-bottom: 55px;
+      position: relative;
+    }
+
+    @include hover{
+      cursor: pointer;
+    }
+
+    &.active{
+      background-color: $neon;
+
+      & .portfolio-logos__svg{
+        path{
+          fill: black
+        }
+      }
+    }
+  }
+
+  &__image-wrap{
+    img{
+      max-width: 84%;
+      margin: auto;
+
+      @include respond-to(md){
+        max-width: 75%;
+      }
+    }
+  }
+
+  &__hidden-wrap{
+    display: none;
+    background-color: #1F1F1F;
+    position: absolute;
+    width: calc(100% + 0px);
+    z-index: 109;
+    top: -50%;
+    left: calc(-100% - 20px);
+    padding: 20px 20px;
+
+    @include respond-to(md){
+      width: 200%;
+      left: -100%;
+      padding: 51px 57px;
+    }
+
+    @include hover{
+      cursor: default;
+    }
+
+    @include respond-to(md){
+      left: -50%;
+    }
+
+    img{
+      width: 150px;
+      margin-left: -7px;
+      transition: 0.4s;
+
+      @include hover{
+        opacity: 0.4
+      }
+    }
+
+    h5{
+      padding-top: 76px;
+      color: #EEECEC;
+
+      @include respond-to(md){
+        padding-top: 166px;
+      }
+    }
+  }
+
+  &__hidden-header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__founder-wrap{
+    display: flex;
+    padding-top: 41px;
+    padding-bottom: 36px;
+    
+    p{
+      padding-right: 27px;
+    }
+
+  }
+
+  &__black-img{
+    display: none;
+  }
+
+  .js-close-logo{
+    cursor: pointer;
+
+    height: 18px;
+    width: 18px;
+
+    @include respond-to(md){
+      height: 22px;
+      width: 22px;
+    }
+
+    @include hover{
+      cursor: pointer;
+
+      svg{
+        path{
+          stroke: $neon
+        }       
+      }
+    }
+  }
+}

@@ -14,6 +14,7 @@
 
 get_header(); ?>
 
+	<div class="page-wrap">
 		<?php
 		if ( have_posts() ) :
 
@@ -29,5 +30,8 @@ get_header(); ?>
 			echo "No posts found.";
 
 		endif; ?>
+	</div>
+
+
 
 <?php get_footer(); ?>

@@ -1,0 +1,121 @@
+.image-left-text{
+  // padding-top: 114px;
+  // padding-bottom: 61px;
+
+
+
+
+
+
+
+  @include respond-to(md){
+    // padding-top: 344px;
+    // padding-bottom: 277px;
+  }
+
+  &__inner{
+
+    
+    @include respond-to(md){
+      height: 50vh;
+    }
+    
+
+    @include respond-to(md){
+      height: calc(100vh - 80px);
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    @include respond-to(xl){
+      height: calc(100vh - 260px);
+    }
+
+    @include respond-to(md){
+      display: flex;
+    }
+  }
+
+  &__left{
+
+    @include respond-to(md){
+      width: 50%;
+      padding-right: 40px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @include respond-to(lg){
+      padding-right: 129px;
+    }
+
+    h3{
+      font-family: 'GT-America-Compressed-Black';
+      font-size: 70px;
+      line-height: 0.9;
+      padding-bottom: 45px;
+
+      @include respond-to(sm){
+        font-size: 90px;
+        padding-bottom: 106px;
+      }      
+    }
+
+    img{
+      height: 50vh;
+      margin: auto;
+
+      @include respond-to(sm){
+        height: 77vh;
+      }      
+
+      @include respond-to(xl){
+        height: auto;
+      }
+    }
+  }
+
+  &__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 34px;
+    opacity: 0;
+    transition: 0.4s;
+    transform: translateY(100vh);
+
+    
+    @include respond-to(md){
+      width: 50%;
+      margin-top: 0px;
+    }
+
+    h2{
+      max-width: 563px;
+      margin-bottom: 35px;
+      font-size: 16px;
+      text-transform: uppercase;
+
+      @include respond-to(md){
+        margin-bottom: 154px;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+
+@keyframes static {
+  0%   {background-position-y: 140px; background-position-x: 140px;}
+  10%  {background-position-y: 340px; background-position-x: 340px;}
+  20%  {background-position-y: 0px; background-position-x: 0px;}
+  30%  {background-position-y: 500px; background-position-x: 500px;}
+  40%  {background-position-y: 120px; background-position-x: 120px;}
+  50%  {background-position-y: 800px; background-position-x: 800px;}
+  60%  {background-position-y: 100px; background-position-x: 100px;}
+  70%  {background-position-y: 80px; background-position-x: 80px;}
+  80%  {background-position-y: 330px; background-position-x: 330px;}
+  90% {background-position-y: 660px; background-position-x: 660px;}
+  100% {background-position-y: 960px; background-position-x: 960px;}
+}

@@ -8,6 +8,149 @@ html {
 }
 
 body {
-  color: $text-color;
+  color: white;
   font: normal 125% / 1.4 $text-font-stack;
+}
+
+.header-compressed{
+  font-size: 60px;
+  line-height: 62px;
+  letter-spacing: 0%;
+  font-weight: 900;
+  font-family: 'GT-America-Compressed-Black';
+
+  @include respond-to(sm){
+    font-size: 100px;
+    line-height: 100px;
+    letter-spacing: 0%;     
+  }
+}
+
+.header-wide{ 
+  font-size: 33px;
+  line-height: 33px;
+  letter-spacing: 3%;
+  font-weight: 900;
+  font-family: 'GT-America-Compressed-Black';
+
+  @include respond-to(sm){
+    font-size: 70px;
+    line-height: 38px;
+    letter-spacing: 2%;     
+  }
+}
+
+.header-compressed-med{
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  font-family: 'GT-America-Compressed-Black';
+
+  @include respond-to(sm){
+    font-size: 44px;
+    line-height: 40px;
+    letter-spacing: 2%;     
+  }
+}
+
+
+.nav{
+  font-size: 26px;
+  line-height: 40px;
+  letter-spacing: 2%;
+  font-weight: 900;
+  font-family: 'GT-America-Expanded-Black';
+
+  @include respond-to(sm){
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 2%;     
+  }
+}
+
+.header-wide-med{
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 3%;
+  font-weight: 900;
+  font-family: 'GT-America-Expanded-Black';
+
+  @include respond-to(sm){
+    font-size: 26px;
+    line-height: 38px;
+    letter-spacing: 3%;     
+  } 
+}
+
+
+.header-wide-small{
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-family: 'GT-America-Expanded-Black';
+
+  @include respond-to(sm){
+    font-size: 18px;
+    line-height: 26px;  
+  } 
+}
+
+.btn-text{
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 4%; 
+  font-weight: 900;
+  font-family: 'GT-America-Expanded-Black';
+}
+
+
+
+.black-p-expanded{
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-family: 'GT-America-Expanded-Black';
+}
+
+.oversized-p{
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  font-weight: 400;
+  font-family: 'GT-America-Standard-Regular';
+
+  @include respond-to(sm){
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0%;     
+  } 
+}
+
+
+
+.body-p{
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  font-weight: 400;
+  font-family: 'GT-America-Standard-Regular';
+}
+
+.body-p-bold{
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  font-weight: 700;
+  font-family: 'GT-America-Standard-Regular';
+}
+
+.tags{
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0%;   
+  font-weight: 400;
+  font-family: 'GT-America-Standard-Regular';
 }

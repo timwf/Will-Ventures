@@ -1,0 +1,186 @@
+.article{
+  margin-top: 61px;
+
+  @include respond-to(md){
+    margin-top: 58px;
+  }
+
+  .top-bar-page__search{
+    display: flex;
+  }
+
+  &__inner{
+    padding-top: 27px;
+
+    @include respond-to(md){
+      display: flex;
+      padding-top: 38px;
+    }
+  }
+
+  &__left{
+
+
+    @include respond-to(md){
+      width: 50%;
+      padding-right: 20px;
+    }
+
+    h1{
+      text-transform: uppercase;
+    }
+
+    p{
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0%;
+      font-weight: 400;
+      font-family: 'GT-America-Standard-Regular';
+      margin-top: 23px;
+    
+      @include respond-to(sm){
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 0%; 
+        margin-top: 43px;    
+      } 
+    }
+  }
+
+  &__social{
+    margin-top: 38px;
+    margin-bottom: 50px;
+
+    @include respond-to(md){
+      margin-top: 55px;
+      margin-bottom: 0;
+    }
+
+    svg{
+      height: 25px;
+      margin-right: 28px;
+
+      @include hover{
+        path{
+          fill: $neon;
+        }
+      }
+    }
+  }
+
+  &__left-wrap{
+
+
+    @include respond-to(md){
+      position: sticky;
+      top: 134px;
+    }
+  }
+
+  &__right{
+
+    @include respond-to(md){
+      width: 50%;
+    }
+
+    img, iframe{
+      width: calc(100% + 40px) !important;
+      margin-left: -20px;
+      max-width: none;
+
+      @include respond-to(md){
+        margin-left: 0px;
+
+        max-width: 100%;
+      }
+    }
+
+    iframe{
+      height: 74vw;
+
+      @include respond-to(md){
+        height: 29vw;
+      }
+    }
+
+    p{
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0%;
+      font-weight: 400;
+      font-family: 'GT-America-Standard-Regular';
+    }
+
+    h4{
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0%;
+      font-weight: 700;
+      font-family: 'GT-America-Standard-Bold';
+    }
+
+    iframe{
+      width: 100%;
+    }
+  }
+
+  &__pagination{
+
+    width: 100%;
+    margin-top: 30px;
+
+    @include respond-to(md){
+      display: flex;
+      margin-top: 55px;
+    }
+  }
+
+  &__pagination-inner{    
+    padding: 26px 20px;
+    background-color: $black;
+    color: white;
+
+    @include respond-to(md){
+      padding: 43px 40px;
+    }
+
+    h3{
+      font-size: 18px;
+      margin-bottom: 14px;
+      transition: 0.4s;
+
+      @include respond-to(md){
+        font-size: 26px;
+        margin-bottom: 8px;
+      }
+    }
+
+    @include hover{
+      background-color: $neon;
+      color: $black;
+      cursor: pointer;
+
+      h3{
+        letter-spacing: 0.15em;
+      }
+    }
+  }
+
+  &__pagination-left{
+
+    @include respond-to(md){
+      width: 50%;
+    }    
+  }
+
+  &__pagination-right{
+
+    @include respond-to(md){
+      width: 50%;
+
+      h3, p{
+        text-align: right;
+      }
+    }
+  }
+}

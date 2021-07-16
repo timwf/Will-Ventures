@@ -61,3 +61,10 @@ function theme_after_setup_theme() {
   add_image_size('extra-large', 1536);
   add_image_size('mega-large', 1920);
 }
+
+
+
+
+
+
+

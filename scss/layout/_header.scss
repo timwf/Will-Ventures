@@ -1,13 +1,111 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
-.page-header {
-  position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+.header{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: 0.4s;
+  
+  &.active{
+    transform: translateY(0%);
+  }
 
-  &__logo {
+  &.dark{
+    display: none;
+    color: $black !important;
+
+    .body-p{
+      color: $black !important;
+    }
+
+    svg{
+      path{
+        fill: $black;
+      }
+    }
+  }
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 17px 20px;
+
+    @include respond-to(sm){
+
+      padding: 22px 40px;
+    }
+
+    p, svg{
+      transition: 0.4s;
+
+      @include hover{
+        color: $neon;
+        cursor: pointer;
+        letter-spacing: 0.15em;
+      }
+    }
+
+    svg{
+      height: 19px;
+      width: 66px;
+      margin-right: -4px;
+
+      @include respond-to(sm){
+        height: 29px;
+        width: 181px;
+        margin-right: -40px;
+      }
+
+      path{
+        transition: 0.4s;
+      }
+
+      @include hover{
+        path{
+          fill: $neon
+        }
+        path:first-of-type{
+          //transform: translateX(-7px);
+        }
+      }
+    }
+  }
+
+  &__menu{
+    display: flex;
+    p{
+      
+      @include respond-to(sm){
+        margin-right: 231px;
+      }
+    }
+  }
+
+  &__contact{
+    display: none;
+
+    @include respond-to(sm){
+      display: block;
+    }
+  }
+}
+
+.home .header__inner{
+  background-color: transparent;
+}
+
+.page-tranition{
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 9999;
+  top: 0px;
+  transform: translateX(-100%);
+  transition: 0s;
+
+  &.active{
+    transform: translateX(0%);
   }
 }

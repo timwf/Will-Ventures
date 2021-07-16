@@ -1,0 +1,78 @@
+.playbook-accordian{
+
+  &__item{
+    
+    &.active{
+      background-color: white;
+      color: $black;
+
+      h2{
+        letter-spacing: 4px;
+        color: $neon;
+
+        @include respond-to(md){
+          letter-spacing: 12px;
+        }
+      }
+
+      @include hover{
+
+
+        .playbook-accordian__header{
+          // background-color: $white !important;
+
+
+        }
+      }
+    }
+  }
+
+  &__header{
+
+    @include hover{
+      cursor: pointer;
+
+      h2{
+        letter-spacing: 4px;
+        color: $neon;
+
+        @include respond-to(md){
+          letter-spacing: 12px;
+        }
+      }
+    }
+
+    h2{
+      padding: 29px 20px;
+      text-transform: uppercase;
+      transition: 0.4s;
+
+      @include respond-to(sm){
+        padding: 58px 40px;
+      }
+    }
+  }
+
+  &__copy{
+
+    border-bottom: solid $white;
+    border-width: 1px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.4s;
+    
+    &.active{
+      max-height: 900px;
+    };
+
+    p{
+      padding: 0px 20px 29px;
+      color: black;
+
+      @include respond-to(sm){
+        max-width: 555px;
+        padding: 0px 40px 56px;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.fly-out-nav{
+  width: 100%;
+  background-color: $white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: 0.4s;
+  z-index: 100;
+
+  &.active{
+    transform: translateX(0%);
+  }
+
+  @include respond-to(sm){
+    width: 512px;
+  }
+
+  &__inner{
+    padding: 21px 20px;
+    color: $black;
+    overflow-y: scroll;
+    height: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include respond-to(sm){
+      padding: 34px 40px;
+    }
+
+    p{
+      transition: 0.4s;
+      @include hover{
+        color: $neon;
+        cursor: pointer;
+        letter-spacing: 0.15em;
+      }
+    }
+ 
+    ul{
+      padding-top: 24px;
+      padding-bottom: 50px;
+    }
+
+    li{
+      padding: 20px 0px;
+
+      &.active{
+        a{
+          color: $neon;
+          letter-spacing: 5px;
+        }
+      }
+    }
+
+    a{
+      color: $black;
+      font-size: 26px;
+      line-height: 40px;
+      letter-spacing: 2%;
+      font-weight: 900;
+      font-family: 'GT-America-Expanded-Black';
+      text-transform: uppercase;
+      transition: 0.4s;
+    
+      @include respond-to(sm){
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 0px;  
+        
+        @include hover{
+          color: $neon;
+          letter-spacing: 5px;
+        }
+      }
+    }
+  }
+}

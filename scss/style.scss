@@ -10,7 +10,11 @@
 @import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
 
 // 4. Layout-related sections
-@import 'layout/header', 'layout/footer';
+@import 'layout/header', 'layout/footer', 'layout/home-hero', 'layout/text-image-right'  
+, 'layout/image-left-text', 'layout/prospectives-listen', 'layout/prospectives-read', 
+'layout/prospectives-learn', 'layout/post-results', 'layout/article', 'layout/portfolio-hero'
+, 'layout/portfolio-logos', 'layout/contact', 'layout/playbook-hero', 'layout/playboog-accordian'
+, 'layout/credo', 'layout/teammeate-header', 'layout/teammates-grid', 'layout/perspectives-generic' ; 
 
 // 5. Components
-@import 'components/button', 'components/hamburger';
+@import 'components/button', 'components/hamburger', 'components/fly-out-nav', 'components/top-bar-page';

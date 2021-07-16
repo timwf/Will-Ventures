@@ -1,0 +1,43 @@
+.prospectives-learn{  
+  margin-top: 0px;
+
+  @include respond-to(lg){
+    //height: 720px;
+  }
+
+  &__right{
+    background-color: #1F1F1F;  
+    display: flex;
+    flex-direction: column;  
+
+    @include respond-to(lg){
+      width: calc(100vh - 117px);
+    }
+
+    svg{
+      width: 100%;
+      height: 75%;
+    }
+
+    img{
+      height: 80%;
+    }
+  }
+
+  &__right-text-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+
+    h2{
+      font-family: 'GT-America-Expanded-Black';
+      font-size: 13vw;
+
+      @include respond-to(lg){
+        font-size: calc(11vh);      
+      }
+    }
+  }
+
+}
